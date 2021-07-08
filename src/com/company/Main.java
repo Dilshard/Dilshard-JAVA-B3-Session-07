@@ -4,37 +4,29 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("This is main method!");
-        studentResults(49,49);
+        Payment student1 = new Payment();
+        Payment student2 = new Payment();
+
+        student1.studentName = "Dhayan";
+        student1.initialPayment = 1500;
+        student1.installmentPayment = 15000;
+        student1.examFee = 3500;
+        student1.totalPayment();
+        student1.firstSemester();
+        student1.secondSemester();
+        student1.thirdSemester();
+        student1.certificateStatus();
 
 
-    }
-
-    public static void studentResults(int mk1, int mk2){
-
-        int total = mk1 + mk2;
-        System.out.println("Total "+total);
-        studentAverage(total);
-
-    }
-
-    public static void studentAverage(int total){
-
-        double avg = total / 2;
-        System.out.println("Average "+avg);
-        studentGrade(avg);
-    }
-
-    public static void studentGrade(double avg){
-        String grade;
-
-        if(avg >= 50){
-            grade = "Pass";
-        }else {
-            grade = "Fail";
-        }
-
-        System.out.println("Grade "+grade);
+        student2.studentName = "Arun";
+        student2.installmentPayment = 8500;
+        student2.installmentPayment = 9500;
+        student2.examFee = 3500;
+        student2.totalPayment();
+        student2.firstSemester();
+        student2.secondSemester();
+        student2.thirdSemester();
+        student2.certificateStatus();
 
     }
 }
